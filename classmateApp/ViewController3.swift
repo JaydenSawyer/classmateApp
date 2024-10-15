@@ -8,12 +8,20 @@
 import UIKit
 
 class ViewController3: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return AppData.Students.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        let cell = tableView.dequeueReusableCell(withIdentifier: "myCell")!
+       //USE FOR STOCK SWIFT CELL
+        cell.textLabel?.text = AppData.Students[indexPath.row].name
+        //cell.detailTextLabel?.text = "hey"
+        //cell.label1.text = cart[indexPath.row]
+        return cell
+
     }
     
    
@@ -29,14 +37,6 @@ class ViewController3: UIViewController, UITableViewDelegate, UITableViewDataSou
     }
     
 
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

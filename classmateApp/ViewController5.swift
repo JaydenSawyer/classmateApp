@@ -23,7 +23,8 @@ var newName = ""
     }
     
     @IBAction func add2Outlet(_ sender: UIButton) {
-    
+        
+        
         
     }
     
