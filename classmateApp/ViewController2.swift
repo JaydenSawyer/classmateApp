@@ -8,17 +8,17 @@
 import UIKit
 
 class ViewController2: UIViewController {
-var count = 0
+    var count = 0
     @IBOutlet weak var YearLabel: UILabel!
     @IBOutlet weak var HeightLabel: UILabel!
     @IBOutlet weak var NameLabel: UILabel!
+    @IBOutlet weak var sortedLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         YearLabel.text = AppData.Students[count].year
         HeightLabel.text =  "\(AppData.Students[count].height)"
         NameLabel.text = AppData.Students[count].name
-        // Do any additional setup after loading the view.
-    }
+            }
     
     @IBAction func NextButton(_ sender: UIButton) {
         count += 1
@@ -31,7 +31,20 @@ var count = 0
     }
     @IBAction func SortButton(_ sender: UIButton) {
         
+        AppData.Students.sort { $0.height < $1.height }
+        count = 0
+        YearLabel.text = AppData.Students[count].year
+        HeightLabel.text = "\(AppData.Students[count].height)"
+        NameLabel.text = AppData.Students[count].name
+        var sortedNames = ""
+        for student in AppData.Students {
+            sortedNames += student.name + "\n"
+        }
+        sortedLabel.text = sortedNames
     }
+
+    
+    
     
     @IBAction func AddButton(_ sender: UIButton) {
         
@@ -39,5 +52,5 @@ var count = 0
     @IBAction func EditButton(_ sender: UIButton) {
         
     }
-    
 }
+

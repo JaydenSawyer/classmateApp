@@ -13,11 +13,13 @@ class Class2{
     var name: String
     var height: Double
     var year: String
+    var sorted: String
     
-    init(name: String, height: Double, year: String) {
+    init(name: String, height: Double, year: String, sorted: String) {
         self.name = name
         self.height = height
         self.year = year
+        self.sorted = sorted
     }
     
     func toString()->String{

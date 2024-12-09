@@ -7,10 +7,10 @@
 
 class AppData{
     
-    static var s1 = Class2(name: "Jimmy John", height: 4.11, year: "Senior")
-    static var s2 = Class2(name: "Jayden", height: 5.11, year: "Senior")
-    static var s3 = Class2(name: "Bannaniel", height: 5.10, year: "Junior")
-    static var s4 = Class2(name: "Rainbow Ryan", height: 5.9, year: "Junior")
+    static var s1 = Class2(name: "Jimmy John", height: 4.11, year: "Senior", sorted: "height")
+    static var s2 = Class2(name: "Jayden", height: 6, year: "Senior", sorted: "height")
+    static var s3 = Class2(name: "Bannaniel", height: 5.10, year: "Junior", sorted: "height")
+    static var s4 = Class2(name: "Rainbow Ryan", height: 5.9, year: "Junior", sorted: "height")
     static var Students = [Class2]()
 }
 
