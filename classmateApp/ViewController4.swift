@@ -15,7 +15,7 @@ class ViewController4: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        
     }
     
     @IBAction func EditButton2(_ sender: UIButton) {
